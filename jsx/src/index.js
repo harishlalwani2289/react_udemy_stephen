@@ -10,7 +10,15 @@ const root = ReactDOM.createRoot(el);
 // 4) Create a component
 
 function App() {
-  return <textarea autoFocus={true}></textarea>;
+  return (
+    <textarea
+      autoFocus={true}
+      maxLength={12}
+      spellCheck
+      className="textarea"
+      style={{ textDecoration: "none", border: "1px solid red" }}
+    ></textarea>
+  );
 }
 // 5) Show the component on the screen
 root.render(<App />);
