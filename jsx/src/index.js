@@ -10,7 +10,9 @@ const root = ReactDOM.createRoot(el);
 // 4) Create a component
 
 function App() {
-  return <h1>{new Date().toLocaleTimeString()}</h1>;
+  const inputType = "number";
+  const minValue = 5;
+  return <input type={inputType} min={minValue}></input>;
 }
 // 5) Show the component on the screen
 root.render(<App />);
