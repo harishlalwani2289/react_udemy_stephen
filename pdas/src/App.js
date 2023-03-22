@@ -8,10 +8,45 @@ import "bulma/css/bulma.css";
 function App() {
   return (
     <div>
-      <div>Personal Digital Assistant</div>
-      <ProfileCard title="Alex" handle="@alexa99" image={AlexaImage} />
-      <ProfileCard title="Cortana" handle="@cortana32" image={CortanaImage} />
-      <ProfileCard title="Siri" handle="@siri01" image={SiriImage} />
+      <div>
+        <section className="hero is-primary">
+          <div className="hero-body ">
+            <p className="title has-text-centered">
+              Personal Digital Assistant
+            </p>
+          </div>
+        </section>
+      </div>
+      <div className="container">
+        <section className="section">
+          <div className="columns">
+            <div className="column is-3">
+              <ProfileCard
+                title="Alexa"
+                handle="@alexa99"
+                image={AlexaImage}
+                description="Alexa is amazon's"
+              />
+            </div>
+            <div className="column is-3">
+              <ProfileCard
+                title="Cortana"
+                handle="@cortana32"
+                image={CortanaImage}
+                description="Cortana is microsoft"
+              />
+            </div>
+            <div className="column is-3">
+              <ProfileCard
+                title="Siri"
+                handle="@siri01"
+                image={SiriImage}
+                description="Appla ke product hain yeh"
+              />
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
   );
 }
