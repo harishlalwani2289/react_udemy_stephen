@@ -1,9 +1,11 @@
 import React from "react";
 
-function ProfileCard(props) {
+function ProfileCard({ title, handle }) {
+  // This line is also not required
+  //   const { title, handle } = props;
   return (
     <div>
-      PDA name: {props.title} with twitter handle {props.handle}
+      PDA name: {title} with twitter handle {handle}
     </div>
   );
 }
