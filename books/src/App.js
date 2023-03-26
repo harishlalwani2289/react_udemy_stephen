@@ -8,15 +8,23 @@ function App() {
   const createBook = (title) => {
     const updateBooks = [
       ...books,
-      { id: Math.round(Math.random * 9999), title: title },
+      { id: Math.round(Math.random() * 9999), title: title },
     ];
     setBooks(updateBooks);
+  };
+
+  const deleteBookByID = (id) => {
+    const updatedBooks = books.filter((book) => {
+      return book.id !== id;
+    });
+
+    setBooks(updatedBooks);
   };
 
   return (
     <div className="app">
       <BookCreate onCreate={createBook}></BookCreate>
-      <BookList books={books}></BookList>
+      <BookList books={books} onDelete={deleteBookByID}></BookList>
     </div>
   );
 }
