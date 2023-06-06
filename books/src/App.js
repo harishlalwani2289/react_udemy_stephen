@@ -23,7 +23,8 @@ function App() {
     setBooks(updateBooks);
   };
 
-  const deleteBookByID = (id) => {
+  const deleteBookByID = async (id) => {
+    await axios.delete("http://localhost:3001/books/" + id);
     const updatedBooks = books.filter((book) => {
       return book.id !== id;
     });
@@ -38,10 +39,9 @@ function App() {
         title: newTitle,
       }
     );
-    console.log(response.data);
     const updatedBooks = books.map((book) => {
       if (book.id === id) {
-        return { ...book, title: newTitle };
+        return { ...book, ...response.data };
       }
       return book;
     });
