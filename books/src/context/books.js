@@ -47,10 +47,10 @@ function Provider({ children }) {
 
   const valueToShare = {
     books: books,
-    deleteBookByID: deleteBookByID,
-    editBookById: editBookById,
-    createBook: createBook,
-    fetchBooks: fetchBooks,
+    deleteBookByID,
+    editBookById,
+    createBook,
+    fetchBooks,
   };
 
   return (
