@@ -33,7 +33,7 @@ function Provider({ children }) {
     const response = await axios.put(
       "http://localhost:3001/books/" + id,
       {
-        title: newTitle,
+        title: newTitle,//comme
       }
     );
     const updatedBooks = books.map((book) => {
