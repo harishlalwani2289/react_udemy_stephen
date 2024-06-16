@@ -11,6 +11,7 @@
 // 7. Export statements can be named and default. Named exports are useful when you want to export multiple things from a file. Default exports are useful when you want to export a single thing from a file.
 // 8. When we use ./ in the import statement, it means that we are importing a file from the same directory as the current file. When we use ../ in the import statement, it means that we are importing a file from the parent directory of the current file.
 // 9. When we import without using ./ or ../, it means that we are importing a package or a module that is installed in the node_modules directory.
+// small test change
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
